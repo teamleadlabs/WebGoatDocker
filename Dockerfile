@@ -1,5 +1,5 @@
 FROM openjdk:11-jre-slim
 #WORKDIR /app
-COPY target/*.jar helloworld.jar
+COPY target/*.war helloworld.war
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "helloworld.jar"]
+ENTRYPOINT ["java", "-war", "helloworld.war"]
